@@ -2,9 +2,9 @@ sudo: required
 services: 
   - docker
 
-before install: 
-  - sudo docker build -t swathibande/docker-react -f Dockerfile.dev .
+before_install: 
+  - docker build -t swathibande/docker-react -f Dockerfile.dev .
 
 script: 
-  - sudo docker run swathibande/docker-react npm run test -- --coverage
+  - docker run swathibande/docker-react npm run test -- --coverage
     
